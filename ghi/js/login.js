@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // headers: {
         //   'Content-Type': 'application/json',
         // },
-        credentials: 'include',
+        credentials: "include",
       };
       const url = 'http://localhost:8000/login/';
       const response = await fetch(url, fetchOptions);
