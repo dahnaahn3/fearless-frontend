@@ -53,11 +53,12 @@ const handleSubmit = async (event) => {
     data.conference=conferenceName
 
     const conferenceId = data.conference
-    console.log('data' , data)
+    // console.log(conferenceId)
+    // console.log('data' , data)
 
     const presentationUrl = `http://localhost:8000/api/conferences/${conferenceId}/presentations/`
 
-    console.log('url' , presentationUrl)
+    // console.log('url' , presentationUrl)
 
     const fetchConfig ={
         method: "post",
@@ -67,14 +68,14 @@ const handleSubmit = async (event) => {
         },
     };
 
-    console.log('fetchconfig' , fetchConfig)
+    // console.log('fetchconfig' , fetchConfig)
 
     const response = await fetch(presentationUrl, fetchConfig);
-    console.log('response' , response)
+    // console.log('response' , response)
 
     if(response.ok){
         const newPresentation = await response.json;
-        console.log('new presentation:', newPresentation)
+        // console.log('new presentation:', newPresentation)
 
         setPresenterName('')
         setPresenterEmail('')
@@ -91,6 +92,7 @@ const handleSubmit = async (event) => {
     const response = await fetch(url);
     if (response.ok){
     const data = await response.json()
+    console.log(data)
     setConferences(data.conferences)
 
     }
