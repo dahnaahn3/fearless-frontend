@@ -42,6 +42,13 @@ function App(props) {
           <Route path="new" element={<PresentationForm />} />
         </Route>
 
+        <Route path="*" element={
+          <main>
+            <p>theres nothing here!</p>
+          </main>
+        } />
+
+
       </Routes>
       </div>
 

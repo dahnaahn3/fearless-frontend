@@ -20,8 +20,7 @@ function Nav() {
               <NavLink className="nav-link" aria-current="page" to="/presentations/new">New presentation</NavLink>
             </li>
 
-            <NavLink className="btn btn-primary" to="/attendees/new">Attend!</NavLink>
-
+            
 
           </ul>
         </div>
